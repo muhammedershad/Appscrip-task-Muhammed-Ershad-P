@@ -1,0 +1,103 @@
+.outerLayer {
+    background-color: black;
+    color: #EB4C6B;
+    height: 32px;
+    text-align: center;
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+}
+
+.upperNav {
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    line-height: 14.4px;
+    letter-spacing: 1px;
+    text-align: left;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.side {
+    display: flex;
+}
+
+.icon {
+    font-size: 16px;
+}
+
+.outerNav {
+    background-color: aliceblue;
+    height: 188px;
+}
+
+.big-icon {
+    font-size: 36px;
+}
+
+.innerNav-top {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 43.57px;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.small-icons {
+    display: flex;
+    font-size: 24px;
+    gap: 24px;
+    align-items: center;
+}
+
+.small-icons select {
+    display: flex;
+    gap: 3px;
+    font-size: 12px;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Inter", sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 43.57px;
+    letter-spacing: 1px;
+    justify-items: center;
+}
+
+select {
+    /* appearance: none; */
+    /* -webkit-appearance: none; */
+    -moz-appearance: none;
+    /* Add custom styling */
+    /* padding: 8px; */
+    border: 0;
+    font-size: 12px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Style the arrow icon */
+select::after {
+    content: '\25BC';
+    /* Unicode character for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Ensure arrow doesn't interfere with clicking the select */
+}
+
+@media screen and (max-width: 600px) {
+    .side {
+        display: none;
+    }
+}
