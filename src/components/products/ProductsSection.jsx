@@ -13,7 +13,6 @@ const ProductsSection = () => {
         (async () => {
             const response = await fetch("https://fakestoreapi.com/products");
             const data = await response.json();
-            console.log(data)
             setProducts(data)
         })();
     },[]);
@@ -57,6 +56,7 @@ const ProductsSection = () => {
                             </div>
                             {filters.map((filter) => (
                                 <FilterAccordion
+                                    key={filter.title}
                                     title={filter.title}
                                     options={filter.options}
                                 />
