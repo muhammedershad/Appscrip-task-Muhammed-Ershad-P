@@ -22,10 +22,11 @@ const ProductCard = ({ imageSrc, title, description }) => {
                         overflow: "hidden",
                         textOverflow: "ellipsis",
                         width: "280px",
+                        color:' #888792'
                     }}
                     className={"productDescription"}
                 >
-                    Sign in or Create an account to see pricing
+                    <span style={{}}>Sign in</span> or Create an account to see pricing
                 </p>
             </div>
 

@@ -19,19 +19,20 @@
 /* Tablet Styles */
 @media screen and (min-width: 768px) {
     .heroSection-outer {
-        padding: 40px; /* Adjust padding for tablet */
+        padding: 40px;
     }
 
     .heroSection-outer h1 {
-        font-size: 48px; /* Adjust font size for tablet */
-        line-height: 60px; /* Adjust line height for tablet */
-        margin: 20px 0; /* Adjust margin for tablet */
+        font-size: 48px;
+        line-height: 60px; 
+        margin: 20px 0; 
+        font-weight: 300;
     }
 
     .heroSection-outer p {
-        font-size: 18px; /* Adjust font size for tablet */
-        line-height: 30px; /* Adjust line height for tablet */
-        padding: 0 100px; /* Adjust padding for tablet */
-        margin: 20px 0; /* Adjust margin for tablet */
+        font-size: 18px;
+        line-height: 30px; 
+        padding: 0 100px; 
+        margin: 20px 0; 
     }
 }

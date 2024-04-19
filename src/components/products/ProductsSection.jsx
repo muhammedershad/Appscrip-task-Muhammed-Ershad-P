@@ -6,7 +6,7 @@ import FilterAccordion from "../ui/filterAccordion";
 import Spinner from "../ui/Spinner";
 
 const ProductsSection = () => {
-    const [showFilter, setShowFilter] = useState(false); // Initially set to false
+    const [showFilter, setShowFilter] = useState(false);
     const [products, setProducts] = useState();
     useState(() => {
         (async () => {

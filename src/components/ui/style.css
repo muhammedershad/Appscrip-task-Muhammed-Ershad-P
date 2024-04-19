@@ -28,6 +28,7 @@ h4 {
 .accordionHeaderSection {
     display: flex;
     row-gap: 10px;
+    justify-content: space-between;
 }
 
 .productCard {
