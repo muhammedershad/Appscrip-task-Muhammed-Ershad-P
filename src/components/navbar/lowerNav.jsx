@@ -171,7 +171,7 @@ const LowerNav = () => {
                         className="close-icon"
                         onClick={() => setSidebarOpen(false)}
                     >
-                        <IoClose />
+                        <p>x</p>
                     </div>
                     <ul>
                         {navbarHeadings.map((menu) => (
