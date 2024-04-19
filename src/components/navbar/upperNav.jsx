@@ -1,6 +1,5 @@
 import React from "react";
 import Styles from "./style.css";
-import { BsColumnsGap } from "react-icons/bs";
 
 const UpperNav = () => {
     return (
