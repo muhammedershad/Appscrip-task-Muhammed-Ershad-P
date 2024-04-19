@@ -20,7 +20,7 @@ const ProductCard = ({ imageSrc, title, description }) => {
                 <p className={"productDescription"}>{description}</p>
             </div>
             <div className={"productActions"}>
-                <i className={`fas fa-heart ${"heartIcon"}`}></i>{" "}
+                {/* <i className={`fas fa-heart ${"heartIcon"}`}></i>{" "} */}
                 {/* Heart icon */}
             </div>
         </div>

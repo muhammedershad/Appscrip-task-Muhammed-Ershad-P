@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Style from "./style.css";
-import { MdAutoAwesome, MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { MdKeyboardArrowLeft } from "react-icons/md";
 import ProductCard from "../ui/ProductCard";
 import FilterAccordion from "../ui/filterAccordion";
 
