@@ -1,4 +1,4 @@
-const navbarHeadings = [
+export const navbarHeadings = [
     { title: "SHOP", link: "#" },
     { title: "SKILLS", link: "#" },
     { title: "STORIES", link: "#" },

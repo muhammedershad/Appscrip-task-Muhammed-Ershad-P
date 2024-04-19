@@ -1,0 +1,82 @@
+.filterAccordion {
+    margin-top: 10px;
+    border-bottom: 1px solid #888792;
+}
+
+.filterAccordion p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    color: #888792;
+    text-decoration: underline;
+
+}
+
+h4 {
+    margin: 0;
+}
+
+.filterAccordion label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+
+}
+
+.accordionHeaderSection {
+    display: flex;
+    row-gap: 10px;
+}
+
+.productCard {
+    width: 330px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.productCard:hover {
+    transform: translateY(-5px);
+}
+
+.productImage {
+    width: 100%;
+    height: auto;
+}
+
+.productDetails {
+    padding: 10px;
+}
+
+.productTitle {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.productDescription {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.productActions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.heartIcon {
+    color: #ff6b6b;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.heartIcon:hover {
+    color: #ff4757;
+}

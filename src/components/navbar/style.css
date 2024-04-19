@@ -4,7 +4,7 @@
     height: 32px;
     text-align: center;
     display: flex;
-    width: 100vw;
+    width: 100%;
     justify-content: space-around;
 }
 
@@ -29,23 +29,32 @@
 }
 
 .outerNav {
-    background-color: aliceblue;
     height: 188px;
+    border-bottom: 1px solid #E5E5E5;
 }
+
 
 .big-icon {
     font-size: 36px;
+    display: flex;
+    gap: 15px;
+}
+
+.menu-icon {
+    display: none;
 }
 
 .innerNav-top {
     display: flex;
     font-family: "Poppins", sans-serif;
+    height: 130px;
     font-size: 36px;
     font-weight: 800;
     line-height: 43.57px;
     letter-spacing: 1px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0px 50px 0px 50px;
 }
 
 .small-icons {
@@ -53,6 +62,11 @@
     font-size: 24px;
     gap: 24px;
     align-items: center;
+}
+
+.small-icons span {
+    display: flex;
+    gap: 24px;
 }
 
 .small-icons select {
@@ -68,15 +82,14 @@
     font-weight: 800;
     line-height: 43.57px;
     letter-spacing: 1px;
-    justify-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
+
 select {
-    /* appearance: none; */
-    /* -webkit-appearance: none; */
     -moz-appearance: none;
-    /* Add custom styling */
-    /* padding: 8px; */
     border: 0;
     font-size: 12px;
     background-color: #fff;
@@ -84,20 +97,119 @@ select {
     font-weight: 500;
 }
 
-/* Style the arrow icon */
 select::after {
     content: '\25BC';
-    /* Unicode character for down arrow */
     position: absolute;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
     pointer-events: none;
-    /* Ensure arrow doesn't interfere with clicking the select */
 }
+
+.innerNav-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.innerNav-bottom ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.innerNav-bottom ul li {
+    margin: 0 10px;
+}
+
+.innerNav-bottom ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.sideBar {
+    background-color: rgba(103, 99, 99, 0.9); /* Adjusted background color with opacity */
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    transition: left 0.3s ease; /* Smooth transition when opening/closing */
+    z-index: 999; /* Ensure sidebar is on top of other content */
+    backdrop-filter: blur(5px); /* Apply blur effect to background */
+}
+
+.sideBar.open {
+    left: 0; /* When sidebar is open, move it to the left */
+}
+
+.sideBar ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin-top: 50px;
+}
+
+.sideBar li {
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+}
+
+.sideBar li:hover {
+    background-color: #676767;
+    cursor: pointer;
+}
+
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000; /* Ensure icon is above sidebar content */
+}
+
+
+
 
 @media screen and (max-width: 600px) {
     .side {
         display: none;
     }
+
+    .small-icons {
+        gap: 12px;
+        font-size: 20px;
+
+    }
+
+    .small-icons span {
+        display: none;
+    }
+
+    .outerNav {
+        height: 55px;
+    }
+
+    .innerNav-top {
+        height: 55px;
+    }
+
+    .innerNav-bottom ul li {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
 }

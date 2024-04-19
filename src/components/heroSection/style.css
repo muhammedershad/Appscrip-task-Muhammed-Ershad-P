@@ -1,0 +1,37 @@
+.heroSection-outer {
+    padding: 20px;
+    text-align: center;
+}
+
+.heroSection-outer h1 {
+    font-size: 36px; /* Adjust font size for mobile */
+    line-height: 48px; /* Adjust line height for mobile */
+    margin: 10px 0; /* Adjust margin for mobile */
+}
+
+.heroSection-outer p {
+    font-size: 16px; /* Adjust font size for mobile */
+    line-height: 24px; /* Adjust line height for mobile */
+    padding: 0 20px; /* Adjust padding for mobile */
+    margin: 10px 0; /* Adjust margin for mobile */
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) {
+    .heroSection-outer {
+        padding: 40px; /* Adjust padding for tablet */
+    }
+
+    .heroSection-outer h1 {
+        font-size: 48px; /* Adjust font size for tablet */
+        line-height: 60px; /* Adjust line height for tablet */
+        margin: 20px 0; /* Adjust margin for tablet */
+    }
+
+    .heroSection-outer p {
+        font-size: 18px; /* Adjust font size for tablet */
+        line-height: 30px; /* Adjust line height for tablet */
+        padding: 0 100px; /* Adjust padding for tablet */
+        margin: 20px 0; /* Adjust margin for tablet */
+    }
+}
