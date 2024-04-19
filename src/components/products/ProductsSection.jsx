@@ -8,20 +8,19 @@ import FilterAccordion from "../ui/filterAccordion";
 
 const ProductsSection = () => {
     const [showFilter, setShowFilter] = useState(false); // Initially set to false
-    const [products, setProducts] = useState()
+    const [products, setProducts] = useState();
     useState(() => {
         (async () => {
             const response = await fetch("https://fakestoreapi.com/products");
             const data = await response.json();
-            setProducts(data)
+            setProducts(data);
         })();
-    },[]);
+    }, []);
 
     // Toggle the state when the button is clicked
     const toggleFilter = () => {
         setShowFilter(!showFilter);
     };
-
 
     const filters = [
         { title: "IDEAL FOR", options: ["Men", "Women", "Baby & Kids"] },
@@ -40,7 +39,22 @@ const ProductsSection = () => {
                 <div className="header-inner-div">
                     <p>3425 Items</p>
                     <p className="hide-filter-text" onClick={toggleFilter}>
-                        <MdKeyboardArrowLeft />
+                        <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M9.99986 2.72125L5.65319 7.06792C5.13986 7.58125 5.13986 8.42125 5.65319 8.93458L9.99986 13.2812"
+                                stroke="#292D32"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+
                         {showFilter ? "Hide Filter" : "Show Filter"}
                     </p>
                 </div>
@@ -68,12 +82,17 @@ const ProductsSection = () => {
                     className={`right-section ${
                         showFilter ? "show-filter" : ""
                     }`}
-                     style={{ width: showFilter ? '80%' : '100%' }}>
-               
+                    style={{ width: showFilter ? "80%" : "100%" }}
+                >
                     <div className="product-section">
-                    {products?.map((product, index) => (
-                        <ProductCard key={index} title={product.title} imageSrc={product.image} description={product.description} />
-                    ))}
+                        {products?.map((product, index) => (
+                            <ProductCard
+                                key={index}
+                                title={product.title}
+                                imageSrc={product.image}
+                                description={product.description}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
