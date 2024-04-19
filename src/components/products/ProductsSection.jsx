@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Style from "./style.css";
 import ProductCard from "../ui/ProductCard";
 import FilterAccordion from "../ui/filterAccordion";
+import Spinner from "../ui/Spinner";
 
 const ProductsSection = () => {
     const [showFilter, setShowFilter] = useState(false); // Initially set to false
@@ -82,7 +83,8 @@ const ProductsSection = () => {
                     }`}
                     style={{ width: showFilter ? "80%" : "100%" }}
                 >
-                    <div className="product-section">
+                    {
+                        products ? (<div className="product-section">
                         {products?.map((product, index) => (
                             <ProductCard
                                 key={index}
@@ -91,7 +93,8 @@ const ProductsSection = () => {
                                 description={product.description}
                             />
                         ))}
-                    </div>
+                    </div>) : (<Spinner />)
+                    }
                 </div>
             </div>
         </div>

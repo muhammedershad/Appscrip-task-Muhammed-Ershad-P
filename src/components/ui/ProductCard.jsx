@@ -6,19 +6,29 @@ const ProductCard = ({ imageSrc, title, description }) => {
     return (
         <div className={"productCard"}>
             <div className={"productImage"}>
-                <Image
-                    src={
-                        imageSrc
-                    }
-                    alt={title}
-                    width={300}
-                    height={300}
-                />
+                <Image src={imageSrc} alt={title} width={250} height={300} />
             </div>
-            <div className={"productDetails"}>
+            <div
+                style={{
+                    overflow: "hidden",
+                    whiteSpace: "nowrap",
+                    width: "280px",
+                }}
+                className={"productDetails"}
+            >
                 <h2 className={"productTitle"}>{title}</h2>
-                <p className={"productDescription"}>{description}</p>
+                <p
+                    style={{
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        width: "280px",
+                    }}
+                    className={"productDescription"}
+                >
+                    Sign in or Create an account to see pricing
+                </p>
             </div>
+
             <div className={"productActions"}>
                 {/* <i className={`fas fa-heart ${"heartIcon"}`}></i>{" "} */}
                 {/* Heart icon */}
