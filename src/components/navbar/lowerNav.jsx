@@ -13,9 +13,6 @@ import { IoClose } from "react-icons/io5";
 
 const LowerNav = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
-    useEffect(() => {
-        console.log(sidebarOpen);
-    }, [sidebarOpen]);
     return (
         <div className="outerNav">
             <div className="innerNav-top">
